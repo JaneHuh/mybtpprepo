@@ -1,7 +1,6 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" >
     <VBox>
         <Title titleStyle="H2" text="filelist" />
-        
         <tnt:NavigationList
             id="navigationList"
             width="200px"
