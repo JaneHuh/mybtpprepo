@@ -28,7 +28,7 @@ let app = http.createServer(function (request, response) {
         }
 
         // /* -- SYNC 함수 
-        let adirContentList = fs.readdirSync('./content');
+        let adirContentList = fs.readdirSync('./content'); //fs: file system
         let aContentList = myLib.getFileList(adirContentList, 'content');
         let adirmyfilesList = fs.readdirSync('./myfiles');
         let aMyFileList = myLib.getFileList(adirmyfilesList, 'myfiles');
@@ -143,8 +143,23 @@ let app = http.createServer(function (request, response) {
 
     } else if (sPath === '/files') {
         let adirmyfilesList = fs.readdirSync('./myfiles');
-        if (adirmyfilesList) {
-            let sFilesList = JSON.stringify(adirmyfilesList);
+        if (adirmyfilesList) { //adirmyfilesList === true
+
+            //JS 표현(객체형식표현) 익숙 
+
+            //let oMyObj = {
+            //    name : 'JaneHuh',
+            //    age : '21',
+            //    myFavomovie : [
+            //        '영화1',
+            //        '영화2'
+            //    ]    
+            //};
+
+            //-> JSON(Java Script Object Notation): Data를 주고 받는 형식 
+            let sFilesList = JSON.stringify(adirmyfilesList); //stringify: 함수, 문자열로 담아준다. 
+            
+            //무시. 보안관련 CSR?
             let origin = request.headers.origin;
 
             response.setHeader('Content-Type' , 'text/html; charset=utf-8',)
