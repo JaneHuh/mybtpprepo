@@ -14,6 +14,14 @@
       <ActionListItem id="link5" text="5. javascript" press='.onPress'/>
     </List>
 
+
+    <!--Properties, Aggregations, Associations: 화면 요소 결정 -->
+    <List items = "{myData>/}"> <!--꺽쇠괄호 영역은 Aggregations 바인딩(영역)이다-->
+      <items> <!--items(default): 생략 가능, Type: sap.m.ListItemBase(subclasses: sap.a.ActionListItem..)-->
+        <ActionListItem id="Link" text= "{myData>}" press='.onPress'/> <!-- "{myData>/}"라 입력하면 test,ttt,ㅇㅅㅅ2 3개가 나타남-->
+      </items>
+    </List>
+
     <HBox id="myExtend">
       <!-- 추가될 화면은 여기에 랜더링 -->
     </HBox>
