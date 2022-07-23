@@ -83,7 +83,7 @@ sap.ui.define(
               //    1: "ttt"
               //    2: "ㅇㅅㅅ2"
               debugger;
-            }.bind(this), // bind
+            }.bind(this), // bind(): 이 메서드가 호출되면 새로운 함수를 생성. this를 bind의 인수로 돌아오는 값으로 바꾸어 return
 
             error : function (...params){ // 세 번째 기본 파라미터
               debugger;
