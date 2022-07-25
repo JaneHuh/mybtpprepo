@@ -36,7 +36,7 @@
 
     <!--
     <List items = "{myData>/}"> 
-      <ActionListItem id="Link" text="{myData>}" press=".onPress" />
+      <ActionListItem id="Link" text="{myData>filename}" press=".onPress" />
     </List> 
     -->
 

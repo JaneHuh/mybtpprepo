@@ -24,7 +24,7 @@
         -->
 
         <List items = "{myData>/}"> 
-            <ActionListItem id="Link" text="{myData>}" press=".onPress" /> 
+            <ActionListItem id="Link" text="{myData>filename}" press=".onActPress" /> 
             <!-- "{myData>}": "test", "ttt", "ㅇㅅㅅ2"
                  "{myData>/}": "test,ttt,ㅇㅅㅅ2" 3개 -->
         </List> 
