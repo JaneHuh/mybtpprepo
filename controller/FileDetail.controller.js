@@ -1,0 +1,1 @@
+sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel","sap/ui/core/Fragment"],function(e,n,t){"use strict";return e.extend("gitpg.myapp.controller.FileDetail",{onInit:function(){}})});

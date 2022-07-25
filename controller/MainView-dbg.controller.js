@@ -91,7 +91,18 @@ sap.ui.define(
           }
         )
       },
-
+      onActPress : function(oEvent){
+        let oItem = oEvent.getSource();
+        let oRouter = this.getOwnerComponent().getRouter();
+        debugger;
+        let test =  oItem.getBindingContext("myData").getPath()
+        oRouter.navTo(
+          "FileDetail", //이동
+          {//url 
+            filePath : window.encodeURIComponent(oItem.getBindingContext("myData").getPath()) //myData로 맵핑되어 있는 걸 읽어오겠다
+          }
+        )
+      },
       onPress: function (oEvent) {
         let sIdRaiseEvent = oEvent.getSource().getId();
         let sIdLink0 = this.getView().byId('link0').getId();
